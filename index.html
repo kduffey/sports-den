@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#140e09"><title>Kevin Duffey — The Den</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#140e09;color:#f3e6ce;font-family:Georgia,serif}main{min-height:100svh;display:grid;place-content:center}.room{position:relative;width:min(100vw,177.68svh);aspect-ratio:1672/941;isolation:isolate}.room>img{width:100%;height:100%;display:block}.brand{position:absolute;top:1.5%;left:4%;font-size:clamp(13px,1.5vw,25px);letter-spacing:.08em;text-shadow:0 2px 4px #000}.nav-hit{color:#f3e6ce;text-decoration:none;font-size:clamp(10px,1.2vw,20px);text-shadow:0 2px 4px #000;display:grid;place-items:center;position:absolute;top:1%;height:4%;border-radius:3px}.writing{left:85%;width:4.9%}.subscribe{left:90.7%;width:5.7%}.about{left:81%;width:3.6%}.nav-hit:focus-visible{outline:2px solid #f4c87d}
+.device-hit{position:absolute;z-index:2;border:0;background:transparent;padding:0;cursor:pointer;color:transparent}.device-hit:focus{outline:0}.device-hit::after{content:"";position:absolute;inset:-5%;opacity:0;pointer-events:none;transition:opacity .28s ease;background:radial-gradient(ellipse at center,rgba(255,201,116,.25),rgba(255,177,67,.10) 48%,transparent 74%);filter:blur(5px)}.device-hit:hover::after,.device-hit:focus-visible::after{opacity:1}.tv-hit{left:26.13%;top:24.34%;width:18.48%;height:24.65%;clip-path:url(#crt-screen-clip);z-index:3}.screen-video{position:absolute;z-index:2;left:26.13%;top:24.34%;width:18.48%;height:24.65%;clip-path:url(#crt-screen-clip);overflow:hidden;pointer-events:none}.screen-video video{width:100%;height:100%;display:block;object-fit:cover;background:#000}.screen-video[hidden]{display:none}.radio-hit{left:.35%;top:28%;width:10.7%;height:26%;border-radius:42%}.radio-hit::after{inset:-10%;background:radial-gradient(ellipse at 50% 55%,rgba(255,182,70,.35),rgba(255,157,45,.14) 42%,transparent 72%);filter:blur(7px)}.radio-hit.playing::after{opacity:1;animation:radio-pulse 2.8s ease-in-out infinite}.tv-hit:hover::after{background:radial-gradient(ellipse at 50% 55%,rgba(255,203,133,.34),rgba(255,175,75,.12) 48%,transparent 76%);filter:blur(4px)}@keyframes radio-pulse{0%,100%{opacity:.42}50%{opacity:1}}
+dialog{max-width:440px;background:#f2e8d6;color:#302519;border:0;border-radius:5px;padding:30px}dialog::backdrop{background:#0009}dialog button{cursor:pointer;padding:8px 18px}@media(max-width:600px){.room{width:100vw}}
+.mobile-header,.explore-nav{display:none}.room-viewport{max-width:100vw}
+.panorama{display:contents}
+.hat-lettering{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+@media(min-width:901px){
+ body{overflow:hidden}
+ main{display:block;height:100dvh;min-height:0}
+ .room-viewport{width:100vw;height:100dvh;overflow:hidden;display:flex;justify-content:center;align-items:center}
+ .panorama{display:block;position:relative;flex:none;width:max(100vw,calc(100dvh * 1672 / 941));aspect-ratio:1672/941}
+ .room{width:100%}
+ .room>img{content:url('room-expanded-v2.png')}
+ .room>.tv-hit,.room>.screen-video{left:36.48%;top:27.42%;width:12.92%;height:18.02%}
+ .room>.radio-hit{left:18%;top:30.5%;width:8.6%;height:18%}
+ .room>.hat-hit{left:74.5%!important;top:30.5%!important;width:6.5%!important;height:7.5%!important}
+ .room>.original-cover{display:none}
+ .room>.expanded-cover{display:block!important}
+ .room>.hat-lettering{display:block}
+ .room>.brand{position:fixed;top:18px;left:4vw;z-index:6}
+ .room>.nav-hit{position:fixed;top:10px;height:44px;z-index:6}
+ .room>.about{left:auto;right:15.4vw;width:5vw}
+ .room>.writing{left:auto;right:9vw;width:6vw}
+ .room>.subscribe{left:auto;right:2.5vw;width:6vw}
+}
+@media(max-width:900px){
+ main{display:flex;flex-direction:column;justify-content:center;min-height:100svh}
+ .mobile-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:22px 20px;background:#140e09}
+ .mobile-header>a{font-size:16px;letter-spacing:.08em}.mobile-header nav{display:flex;gap:18px}.mobile-header a{color:#f3e6ce;text-decoration:none}.mobile-header nav a{font:13px Georgia,serif;min-height:32px;display:grid;align-items:center}
+ .room-viewport{width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .room-viewport::-webkit-scrollbar{display:none}
+ .room{width:max(100vw,calc(clamp(430px,68svh,650px) * 1.7768));max-width:none}
+ .room>.brand,.room>.nav-hit{display:none}
+ .explore-nav{display:flex;flex-direction:column;align-items:center;gap:14px;padding:20px 16px 24px}
+ .explore-nav p{margin:0;color:#b9a68a;font:12px Georgia,serif;letter-spacing:.06em}
+ .explore-nav>div{display:flex;gap:8px}.explore-nav button{min-height:44px;padding:10px 20px;border:1px solid #756044;border-radius:24px;background:#23190f;color:#f3e6ce;font:14px Georgia,serif;cursor:pointer}
+ .explore-nav button:hover,.explore-nav button[aria-pressed="true"]{background:#49351e;border-color:#c6a16a}
+ .mobile-header a:focus-visible,.explore-nav button:focus-visible{outline:2px solid #f4c87d;outline-offset:4px}
+ .device-hit:focus-visible{outline:2px solid #f4c87d;outline-offset:3px}
+}
+@media(prefers-reduced-motion:reduce){.radio-hit.playing::after{animation:none}.device-hit::after{transition:none}}
+</style></head>
+<body><main>
+<header class="mobile-header"><a href="index.html">KEVIN DUFFEY</a><nav aria-label="Main navigation"><a href="#about" class="mobile-about">About</a><a href="https://www.kevinduffey.com/archive">Writing</a><a href="https://www.kevinduffey.com/subscribe">Subscribe</a></nav></header>
+<div class="room-viewport" aria-label="Explore the sports den"><div class="panorama"><div class="room">
+<img src="room.png?v=20261016-refined" alt="A warm wood-paneled sports den with a vintage radio and television, an early ESPN computer, classic sports memorabilia and stacks of Kevin Duffey’s favorite books.">
+<div class="brand">KEVIN DUFFEY</div>
+<svg class="hat-lettering" viewBox="0 0 1672 941" aria-hidden="true"><defs><clipPath id="hat-lettering-area"><rect x="1257" y="299" width="49" height="35" rx="3"/></clipPath></defs><image href="hat-lettering-repair.png" width="1672" height="941" clip-path="url(#hat-lettering-area)"/></svg>
+<a class="device-hit hat-hit" href="saturday-down-south.html" aria-label="Read the story of Saturday Down South" style="left:78.5%;top:37%;width:10%;height:10%;border-radius:50%;z-index:4"></a>
+<svg class="original-cover" aria-label="Sports Illustrated Dream Team cover" role="img" viewBox="0 0 1672 941" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"><image href="dream-team-cover.png" width="104" height="148" preserveAspectRatio="none" transform="matrix(1,-.0676,0,1,944,74)" style="filter:brightness(.72) sepia(.14) saturate(.85)"/></svg>
+<svg class="expanded-cover" aria-label="Sports Illustrated Dream Team cover" role="img" viewBox="0 0 1672 941" style="display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none"><image href="dream-team-cover.png" width="70" height="100" preserveAspectRatio="none" transform="matrix(1,-.045,0,1,965,87)" style="filter:brightness(.72) sepia(.14) saturate(.85)"/></svg>
+<a class="nav-hit about" href="#about" aria-label="About Kevin">About</a><a class="nav-hit writing" href="https://www.kevinduffey.com/archive" aria-label="Read Kevin’s writing">Writing</a><a class="nav-hit subscribe" href="https://www.kevinduffey.com/subscribe" aria-label="Subscribe">Subscribe</a>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><clipPath id="crt-screen-clip" clipPathUnits="objectBoundingBox"><path d="M .008 .008 C .018 .001 .035 0 .06 .004 L .975 .044 C .992 .045 1 .061 1 .085 L 1 .93 C 1 .967 .989 .991 .966 1 L .035 1 C .014 1 0 .982 0 .956 L 0 .043 C 0 .022 .002 .012 .008 .008 Z"/></clipPath></defs></svg>
+<div class="screen-video" id="screenVideo"><video id="tvVideo" src="pujols-home-run.mp4" playsinline preload="auto"></video></div>
+<button class="device-hit tv-hit" id="tvHit" aria-label="Play the game on the television" aria-pressed="false"></button>
+<button class="device-hit radio-hit" id="radioHit" aria-label="Play the radio broadcast" aria-pressed="false"></button>
+<audio id="radioAudio" src="radio-broadcast.mp3" preload="metadata"></audio>
+</div></div></div>
+<nav class="explore-nav" aria-label="Explore the room"><p>← Swipe to explore · Tap an object →</p><div><button data-object="tvHit" aria-pressed="true">TV</button><button data-object="radioHit" aria-pressed="false">Radio</button><button data-object="hat" aria-pressed="false">SDS Story</button></div></nav>
+</main>
+<dialog id="about"><h2>Kevin Duffey</h2><p>A career in sports media and dissecting how business online has evolved.</p><form method="dialog"><button>Back to the den</button></form></dialog>
+<script>
+const tvHit=document.querySelector('#tvHit'),screenVideo=document.querySelector('#screenVideo'),tv=document.querySelector('#tvVideo'),radioHit=document.querySelector('#radioHit'),radio=document.querySelector('#radioAudio');
+function resetTv(){tv.pause();tv.currentTime=0;tvHit.setAttribute('aria-pressed','false');tvHit.setAttribute('aria-label','Play the game on the television');}
+function playTv(){if(!tv.paused){resetTv();return}radio.pause();tv.play().then(()=>{tvHit.setAttribute('aria-pressed','true');tvHit.setAttribute('aria-label','Stop the game on the television');}).catch(()=>{tvHit.setAttribute('aria-label','The television video could not be played');});}
+tv.addEventListener('ended',resetTv);
+tvHit.addEventListener('click',playTv);tvHit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();playTv();}});
+radioHit.addEventListener('click',()=>{if(radio.paused){if(radio.ended)radio.currentTime=0;radio.play().then(()=>{radioHit.classList.add('playing');radioHit.setAttribute('aria-pressed','true');radioHit.setAttribute('aria-label','Pause the radio broadcast');}).catch(()=>{radioHit.classList.remove('playing');radioHit.setAttribute('aria-label','The radio broadcast could not be played');});}else{radio.pause();radioHit.classList.remove('playing');radioHit.setAttribute('aria-pressed','false');radioHit.setAttribute('aria-label','Play the radio broadcast');}});
+let mutedForRadio=false;radio.addEventListener('pause',()=>{radioHit.classList.remove('playing');radioHit.setAttribute('aria-pressed','false');radioHit.setAttribute('aria-label','Play the radio broadcast');if(mutedForRadio){tv.muted=false;mutedForRadio=false;}});radio.addEventListener('ended',()=>radioHit.classList.remove('playing'));
+function keyboardClick(e,fn){if(e.key==='Enter'||e.key===' '){e.preventDefault();fn();}}radioHit.addEventListener('keydown',e=>keyboardClick(e,()=>radioHit.click()));
+radioHit.addEventListener('click',()=>{if(!tv.paused&&!tv.muted){tv.muted=true;mutedForRadio=true;}});
+document.querySelectorAll('.about,.mobile-about').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();document.querySelector('dialog').showModal();}));
+const viewport=document.querySelector('.room-viewport'),room=document.querySelector('.room'),compact=matchMedia('(max-width:900px)'),reduceMotion=matchMedia('(prefers-reduced-motion:reduce)');
+let selectedObject='tvHit';
+function revealObject(name,smooth=false){
+ const target=name==='hat'?document.querySelector('.hat-hit'):document.getElementById(name);
+ selectedObject=name;
+ if(compact.matches)viewport.scrollTo({left:target.offsetLeft+target.offsetWidth/2-viewport.clientWidth/2,behavior:smooth&&!reduceMotion.matches?'smooth':'instant'});
+ document.querySelectorAll('[data-object]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.object===name)));
+}
+document.querySelectorAll('[data-object]').forEach(button=>button.addEventListener('click',()=>revealObject(button.dataset.object,true)));
+document.querySelectorAll('.device-hit').forEach(target=>target.addEventListener('focus',()=>{if(compact.matches)revealObject(target.classList.contains('hat-hit')?'hat':target.id);}));
+new ResizeObserver(()=>{if(compact.matches)revealObject(selectedObject);else viewport.scrollLeft=0;}).observe(viewport);
+revealObject(selectedObject);
+</script></body></html>
